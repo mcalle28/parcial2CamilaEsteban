@@ -1,17 +1,12 @@
 Sección Critica
 
 1-Si no existiera la sección critica para el acceso a recursos compartidos, estos podrian ser tomados por varios hilos o procesos en cualquier momento.
-La sección critica asegura el control de los recursos compartidos por medio de, por ejemplo, un semáforo, gracias al cual cuando se necesiten recursos
-se tomarán un proceso a la vez.
+La sección critica asegura el control de los recursos compartidos por medio de, por ejemplo, un semáforo, gracias al cual cuando se necesiten recursos se tomarán un proceso a la vez.
 En esta sección, si no se asegurara el correcto manejo de las mismas, o si no existiera, podria crear problemas:
-En el caso del productor-consumidor, si el productor produce, solo uno de los consumidores puede tomar su producto y consumirlo, pero sin sección critica, varios consumidores
-pueden acceder a un mismo producto, creando errores en el programa.
+En el caso del productor-consumidor, si el productor produce, solo uno de los consumidores puede tomar su producto y consumirlo, pero sin sección critica, varios consumidores pueden acceder a un mismo producto, creando errores en el programa.
 
-2-
+2-Como bien se define anteriormente, la sección crítica se encarga de proteger y controlar los recursos que son compartidos a la hora de tener diferentes hilos o programas en ejecución, es decir, se encarga de detener una cantidad determinada de procesos y ponerlos en cola cuando un programa está modificando o leyendo una determinada variable o recurso, por tal motivo,si la seccion crítica es bastante larga o amplia, los procesos en cola deberán esperar una larga cantidad de tiempo para ser ejecutados, dando problemas en la eficiencia del programa que esté compartiendo el recurso.
 
-3- El que no se haga una copia de la variable compartida puede traer errores del tipo "ver lo que en realidad no es", en los cuales, el programa funciona correctamente
-pero lo que se muestra en, por ejemplo un print, puede estar erroneo.
-Cada hilo o proceso toma la variable compartida y la modifica, así que cuando se consulten los valores compartidos se debe de consultar la copia, la cual no se esta
-modificando hasta actualizarla.
-Si no se revisa esto correctamente, se pueden dar errores como el visto en clase, en el que la variable compartida parece aumentar más rapido de lo normal, pero no es
-así.
+3- El que no se haga una copia de la variable compartida puede traer errores del tipo "ver lo que en realidad no es", en los cuales, el programa funciona correctamente pero lo que se muestra en, por ejemplo un print, puede estar erroneo.
+Cada hilo o proceso toma la variable compartida y la modifica, así que cuando se consulten los valores compartidos se debe de consultar la copia, la cual no se esta modificando hasta actualizarla.
+Si no se revisa esto correctamente, se pueden dar errores como el visto en clase, en el que la variable compartida parece aumentar más rapido de lo normal, pero no es así.
